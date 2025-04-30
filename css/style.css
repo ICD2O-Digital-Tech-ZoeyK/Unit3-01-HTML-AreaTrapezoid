@@ -2,3 +2,26 @@
 * Created on: Sep 2020
 * This file contains the CSS for index.html
 */
+/* Style the custom header */
+.custom-header {
+    background-color: #4a148c;
+    /* Deep purple */
+    color: white;
+}
+
+/* Card styling */
+.calculator-card {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #f3e5f5;
+    padding-bottom: 20px;
+}
+
+/* Result display styling */
+.area-result {
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    color: #4a148c;
+}

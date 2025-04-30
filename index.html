@@ -1,9 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <title>Title</title>
+        <meta charset="utf-8" />
+    <meta name="description" content="calculate salary with PHP" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Zoey Kariyal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Favicon/site.webmanifest">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Trapezoid Area Calculator</title>
+
+    <!-- Link to external JavaScript file -->
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
-    <p>Paragraph</p>
+
+    <!-- Main layout -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      
+      <!-- Header -->
+      <header class="mdl-layout__header custom-header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Trapezoid Area Calculator</span>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <main class="mdl-layout__content">
+        <div class="page-content">
+
+          <!-- Card container -->
+          <div class="mdl-card mdl-shadow--4dp calculator-card">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Enter Dimensions</h2>
+            </div>
+
+            <div class="mdl-card__supporting-text">
+              <!-- Input Form -->
+              <form id="trapezoidForm">
+
+                <!-- Side A -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="number" id="sideA" required>
+                  <label class="mdl-textfield__label" for="sideA">Side a (base 1)</label>
+                </div>
+
+
+                <!-- Side B -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="number" id="sideB" required>
+                  <label class="mdl-textfield__label" for="sideB">Side b (base 2)</label>
+                </div>
+
+                <!-- Height -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="number" id="height" required>
+                  <label class="mdl-textfield__label" for="height">Height h</label>
+                </div>
+
+              </form>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+              <!-- Calculate Button -->
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                      onclick="calculateArea()">
+                Calculate Area
+              </button>
+            </div>
+
+            <div class="mdl-card__menu">
+              <!-- Output Result -->
+              <span id="result" class="area-result">Area: --</span>
+
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+    <center><img src="./images/trapezoid.webp" alt="triangle" width="25%" height="auto"/></center>
   </body>
 </html>
+
+
